@@ -553,7 +553,7 @@ namespace GTA5_Arrest
 				const string path = "./scripts/ArrestErrors.log";
 				if (File.Exists(path))
 					prevText = File.ReadAllText(path);
-				File.WriteAllText("./scripts/ArrestErrors.log", $"{prevText}[{DateTime.UtcNow:hh:mm:ss}] [ERROR] " + e.Message + "\n" + e.StackTrace + "\n");
+				File.WriteAllText(path, $"{prevText}[{DateTime.UtcNow:hh:mm:ss}] [ERROR] " + e.Message + "\n" + e.StackTrace + "\n");
 			}
 		}
 	}
